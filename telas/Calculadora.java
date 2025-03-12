@@ -1,6 +1,7 @@
 package telas;
 
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 import java.awt.event.ActionListener;	
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -40,7 +41,9 @@ public class Calculadora {
 	
 	private JButton btnIgual = new JButton("=");
 
-	
+	private Font fonte1 = new Font("Arial", Font.BOLD, 26);
+	private Font fonte2 = new Font("Arial", Font.BOLD, 10);
+
 
 
 	
@@ -64,6 +67,7 @@ public class Calculadora {
 			}
 		});
 		this.btn7.setBounds(5, 55, 50, 50);
+		this.btn7.setFont(fonte1);
 		this.btn7.addActionListener(new ActionListener() {
 			
 			@Override
@@ -72,6 +76,7 @@ public class Calculadora {
 			}
 		});
 		this.btn8.setBounds(60, 55, 50, 50);
+		this.btn8.setFont(fonte1);
 		this.btn8.addActionListener(new ActionListener() {
 			
 			@Override
@@ -80,6 +85,7 @@ public class Calculadora {
 			}
 		});
 		this.btn9.setBounds(115, 55, 50, 50);
+		this.btn9.setFont(fonte1);
 		this.btn9.addActionListener(new ActionListener() {
 			
 			@Override
@@ -89,12 +95,13 @@ public class Calculadora {
 		});
 		
 		this.btnMais.setBounds(170, 55, 50, 50);
+		this.btnMais.setFont(fonte1);
 		this.btnMais.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String texto = display.getText();
-				if(!texto.isEmpty() && !texto.endsWith("+") && !texto.endsWith("-") && !texto.endsWith("/")) {
+				if(!texto.isEmpty() && !texto.endsWith("+") && !texto.endsWith("-") && !texto.endsWith("/") && !texto.endsWith("*")) {
 					display.setText(display.getText() + "+");
 				};
 				
@@ -103,6 +110,7 @@ public class Calculadora {
 		});
 		
 		this.btn4.setBounds(5, 110, 50, 50);
+		this.btn4.setFont(fonte1);
 		this.btn4.addActionListener(new ActionListener() {
 			
 			@Override
@@ -111,6 +119,7 @@ public class Calculadora {
 			}
 		});
 		this.btn5.setBounds(60, 110, 50, 50);
+		this.btn5.setFont(fonte1);
 		this.btn5.addActionListener(new ActionListener() {
 			
 			@Override
@@ -119,6 +128,7 @@ public class Calculadora {
 			}
 		});
 		this.btn6.setBounds(115, 110, 50, 50);
+		this.btn6.setFont(fonte1);
 		this.btn6.addActionListener(new ActionListener() {
 			
 			@Override
@@ -128,15 +138,20 @@ public class Calculadora {
 		});
 		
 		this.btnMenos.setBounds(170, 110, 50, 50);
+		this.btnMenos.setFont(fonte1);
 		this.btnMenos.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				display.setText(display.getText() + "-");
+				String texto = display.getText();
+				if(!texto.isEmpty() && !texto.endsWith("-") && !texto.endsWith("+") && !texto.endsWith("/") && !texto.endsWith("*")) {
+					display.setText(display.getText() + "-");
+				};
 			}
 		});
 		
 		this.btn1.setBounds(5, 165, 50, 50);
+		this.btn1.setFont(fonte1);
 		this.btn1.addActionListener(new ActionListener() {
 			
 			@Override
@@ -145,6 +160,7 @@ public class Calculadora {
 			}
 		});
 		this.btn2.setBounds(60, 165, 50, 50);
+		this.btn2.setFont(fonte1);
 		this.btn2.addActionListener(new ActionListener() {
 			
 			@Override
@@ -153,6 +169,7 @@ public class Calculadora {
 			}
 		});
 		this.btn3.setBounds(115, 165, 50, 50);
+		this.btn3.setFont(fonte1);
 		this.btn3.addActionListener(new ActionListener() {
 			
 			@Override
@@ -162,16 +179,21 @@ public class Calculadora {
 		});
 		
 		this.btnMulti.setBounds(170, 165, 50, 50);
+		this.btnMulti.setFont(fonte1);
 		this.btnMulti.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				display.setText(display.getText() + "*");
+				String texto = display.getText();
+				if(!texto.isEmpty() && !texto.endsWith("-") && !texto.endsWith("+") && !texto.endsWith("/") && !texto.endsWith("*")) {
+					display.setText(display.getText() + "*");
+				};
 			}
 		});
 		
 		
 		this.btn0.setBounds(5, 220, 50, 50);
+		this.btn0.setFont(fonte1);
 		this.btn0.addActionListener(new ActionListener() {
 			
 			@Override
@@ -180,6 +202,7 @@ public class Calculadora {
 			}
 		});
 		this.btnPonto.setBounds(60, 220, 50, 50);
+		this.btnPonto.setFont(fonte1);
 		this.btnPonto.addActionListener(new ActionListener() {
 			
 			@Override
@@ -188,6 +211,7 @@ public class Calculadora {
 			}
 		});
 		this.btnTrocaValor.setBounds(115, 220, 50, 50);
+		this.btnTrocaValor.setFont(fonte1);
 		this.btnTrocaValor.addActionListener(new ActionListener() {
 			
 			@Override
@@ -197,14 +221,19 @@ public class Calculadora {
 		});
 		
 		this.btnDivisao.setBounds(170, 220, 50, 50);
+		this.btnDivisao.setFont(fonte1);
 		this.btnDivisao.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				display.setText(display.getText() + "/");
+				String texto = display.getText();
+				if(!texto.isEmpty() && !texto.endsWith("-") && !texto.endsWith("+") && !texto.endsWith("/") && !texto.endsWith("*")) {
+					display.setText(display.getText() + "/");
+				};
 			}
 		});
 		this.btnIgual.setBounds(5, 275, 215, 50);
+		this.btnIgual.setFont(fonte1);
 		this.btnIgual.addActionListener(new ActionListener() {
 			
 			@Override
